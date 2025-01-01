@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:C="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin-top: 70px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #1abc9c;
+            padding: 15px 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #ecf0f1 !important;
+            text-decoration: underline;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        /* Header Section */
+        .header-section {
+            text-align: center;
+            padding: 90px 0;
+            background-color: #2980b9;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #ecf0f1;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-section h1 {
+            font-size: 3em;
+            margin: 20px 0;
+            animation: fadeIn 2s;
+        }
+
+        .header-section p {
+            font-size: 1.2em;
+        }
+
+        .header-section a {
+            color: #ecf0f1;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .header-section a:hover {
+            color: #1abc9c;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 30px;
+            background-color: #ecf0f1;
+        }
+
+        .about-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .about-section p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            padding: 70px 30px;
+            background-color: #ffffff;
+        }
+
+        .projects-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            background-color: #ffffff;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-body h5 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .card-body .btn {
+            background-color: #1abc9c;
+            color: white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-body .btn:hover {
+            background-color: #16a085;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            background-color: #f5f5f5;
+            padding: 50px 30px;
+        }
+
+        .skills-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .progress-bar {
+            background-color: #1abc9c;
+        }
+
+        .skill-container {
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .contact-icon {
+            margin: 15px;
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-icon:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #1abc9c;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        .contact-icon {
+    font-size: 24px; /* Adjust size as needed */
+    color: #000;     /* Set color */
+    text-decoration: none;
+    margin: 0 10px;  /* Adjust spacing between icons */
+}
+
+.contact-icon:hover {
+    color: #0073b1;  /* Change color on hover */
+}
+/* Header Section */
+.header-section {
+    text-align: center;
+    padding: 90px 0;
+    background-color: #2980b9;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-section img {
+    width: 200px;  /* Adjust width to your preference */
+    height: 200px;  /* Adjust height to match width */
+    border-radius: 50%;  /* Makes the image round */
+    border: 4px solid #ecf0f1;  /* Border around the image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* Shadow for better visual effect */
+    object-fit: cover;  /* Ensures the image fills the area without distortion */
+}
+
+
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="70">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header-section">
+    <h1>ONESMUS WASIKE</h1>
+   <img src="https://raw.githubusercontent.com/Wasikeonesmus/images/main/ones.jpeg" alt="Exploratory Analysis">
+
+    <p>Data Scientist | Machine Learning Enthusiast</p>
+    <<a href="https://mail.google.com/mail/?view=cm&fs=1&to=wasikeonesmus980@gmail.com" target="_blank">Email me</a>
+
+    <a href="https://www.linkedin.com/in/timothy-j-179896242" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/Wasikeonesmus" target="_blank">GitHub</a>
+    <a href="https://drive.google.com/file/d/1TXft6OqbHomn58mYOO_wPuIkPJrz4Y9Z/view?usp=drive_link" class="btn btn-lg btn-outline-light mt-3" download>Download Resume</a>
+</div>
+
+</div>
+
+
+    <!-- About Section -->
+    <div id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>I am a Data Scientist with a passion for leveraging data to drive business solutions. With expertise in tools like Excel, Python, R, and Machine Learning, I work to unlock valuable insights from complex datasets. I have experience in transforming raw data into actionable insights that enhance decision-making.</p>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <<img src="https://raw.githubusercontent.com/Wasikeonesmus/images/main/employee%20attrition.jpg" class="card-img-top" alt="Project 1">
+
+
+                    <div class="card-body">
+                        <h5 class="card-title">Employee Attrition Prediction</h5>
+                        <p class="card-text">Predict employee attrition and gain insights into the factors that influence employee retention.</p>
+                        <a href="https://github.com/Wasikeonesmus/Data-science/blob/main/ibm-hr-attrition-analysis-98-model-accuracy.ipynb" target="_blank" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/Wasikeonesmus/images/main/images/basket.jpg" class="card-img-top" alt="Project 2 Thumbnail">
+                    <div class="card-body">
+                        <h5 class="card-title">Market Basket Analysis</h5>
+                        <p class="card-text">An in-depth analysis of consumer purchasing patterns using the Apriori algorithm.</p>
+                        <a href="https://github.com/Wasikeonesmus/Data-science/blob/main/a-predictive-marketing-strategy.ipynb" target="_blank" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                   <img src="https://raw.githubusercontent.com/Wasikeonesmus/images/main/images/stock.png" class="card-img-top" alt="Project 3 Thumbnail">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Time Series Forecasting</h5>
+                        <p class="card-text">Forecast stock prices using ARIMA models and evaluate model accuracy.</p>
+                        <a href="https://github.com/Wasikeonesmus/Data-science/blob/main/stock-predictions-with-backtesting-arima-and-gru.ipynb" target="_blank" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/Wasikeonesmus/images/main/images/churn.png" class="card-img-top" alt="Project 4 Thumbnail">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Churn Prediction</h5>
+                        <p class="card-text">Build a predictive model to predict customer churn for a telecommunications company.</p>
+                        <a href="https://github.com/Wasikeonesmus/Data-science/blob/main/telecom-customer-churn-feature-selection.ipynb" target="_blank" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-md-4">
+                <div class="card">
+                   <img src="https://raw.githubusercontent.com/Wasikeonesmus/images/main/images/sentiment.png" class="card-img-top" alt="Project 5 Thumbnail">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Sentiment Analysis</h5>
+                        <p class="card-text">Perform sentiment analysis on customer reviews using Natural Language Processing (NLP) techniques.</p>
+                        <a href="https://github.com/Wasikeonesmus/images/blob/main/sentiment-analysis-of-customer-review-by-ml.ipynb" target="_blank" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="skill-container">
+            <p>Python</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 90%"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <p>R</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 80%"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <p>Machine Learning</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 85%"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <p>Data Visualization</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 75%"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <div id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me through any of the following platforms:</p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wasikeonesmus980@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+
+    </a>
+    <a href="https://www.linkedin.com/in/timothy-j-179896242" target="_blank" class="contact-icon">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Wasikeonesmus" target="_blank" class="contact-icon">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 ONESMUS. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
